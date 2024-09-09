@@ -1,0 +1,12 @@
+
+services:
+  api:
+    build: .
+    container_name: api_c
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - env:/app/env
+volumes:
+  env:
